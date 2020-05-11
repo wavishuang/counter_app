@@ -27,13 +27,10 @@ class MyApp extends StatelessWidget {
                 })
           ],
           leading: IconButton(
-            icon: FaIcon(FontAwesomeIcons.alignJustify),
+            icon: Icon(Icons.reorder, size: 36.0),
             onPressed: () {
               print('menu button click');
             },
-          ),
-          bottom: (
-
           ),
         ),
         body: SafeArea(
