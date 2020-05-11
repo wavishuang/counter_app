@@ -1,29 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: '計數',
       home: Scaffold(
         appBar: AppBar(
           title: Center(
             child: Text(
-              'I am jeff',
+              "I'm wavis",
               style: TextStyle(
-                color: Colors.yellow,
                 fontSize: 25,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
-          backgroundColor: Colors.green,
+          actions: <Widget>[
+            IconButton(
+                icon: FaIcon(FontAwesomeIcons.search),
+                onPressed: () {
+                  print('fa click');
+                })
+          ],
+          leading: IconButton(
+            icon: FaIcon(FontAwesomeIcons.alignJustify),
+            onPressed: () {
+              print('menu button click');
+            },
+          ),
+          bottom: (
+
+          ),
         ),
         body: SafeArea(
           child: Center(
@@ -32,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
         ),
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.red,
       ),
     );
   }
